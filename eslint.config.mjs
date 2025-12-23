@@ -1,3 +1,4 @@
+import i18next from 'eslint-plugin-i18next';
 import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -14,6 +15,7 @@ export default defineConfig([
     },
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
+    i18next.configs['flat/recommended'],
     {
         settings: {
             react: {
