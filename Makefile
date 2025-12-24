@@ -1,8 +1,14 @@
 start:
 	npm run start
 
+test:
+	npm run unit
+
 lint:
-	npx eslint "**/*.{ts,tsx}"
+	npm run lint:ts
+
+lint-fix:
+	npm run lint:ts:fix
 
 dev:
 	npm run "build:dev"
@@ -11,7 +17,7 @@ prod:
 	npm run "build:prod"
 
 stylelint:
-	npx stylelint "**/*.scss"
+	npm run lint:scss
 
 stylelint-fix:
-	npx stylelint "**/*.scss" --fix
+	npm run lint:scss:fix
