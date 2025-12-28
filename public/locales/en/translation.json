@@ -1,5 +1,11 @@
 {
-    "Тестер": "Tester",
-    "Перевод": "Translate",
-    "language": "English"
+  "Тестер": "Tester",
+  "Перевод": "Translate",
+  "language": "English",
+  "pageNotFound": "Page not found",
+  "ToMain": "To main",
+  "AboutUs": "About us",
+  "unexpectedError": "An unexpected error occurred",
+  "refreshPage": "Refresh page",
+  "throwError": "Throw error"
 }
