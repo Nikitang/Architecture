@@ -1,4 +1,4 @@
-import { Spinner } from 'shared/Spinner/Spinner';
+import { Spinner } from 'shared/ui/Spinner/Spinner';
 import styles from './PageLoader.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 

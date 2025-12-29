@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import i18next from 'eslint-plugin-i18next';
 import js from '@eslint/js';
 import globals from 'globals';
@@ -28,7 +31,13 @@ export default defineConfig([
             'react/react-in-jsx-scope': 'off',
             'no-unused-vars': 'warn',
             '@typescript-eslint/no-unused-vars': 'warn',
-            'max-len': ['error', { ignoreComments: true }],
+            'max-len': [
+                'error',
+                {
+                    ignoreComments: true,
+                    ignorePattern: '^import\\s.+\\sfrom\\s.+$',
+                },
+            ],
         },
     },
 ]);

@@ -4,8 +4,7 @@ import { FC } from 'react';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import NormalThemeIcon from 'shared/assets/icons/theme-normal.svg';
 import DarklThemeIcon from 'shared/assets/icons/theme-dark.svg';
-import Button, { ThemeButton } from 'shared/ui/Button/Button';
-import { LangSwitcher } from 'widgets/LangSwitcher';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -22,7 +21,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({
             className={classNames(styles.themeSwitcher, {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DARK ? <DarklThemeIcon /> : <NormalThemeIcon />}{' '}
+            {theme === Theme.DARK ? <DarklThemeIcon /> : <NormalThemeIcon />}
         </Button>
     );
 };
