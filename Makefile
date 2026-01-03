@@ -2,7 +2,7 @@ i:
 	npm ci .
 
 install:
-	npm i
+	npm install --frozen-lockfile
 
 start:
 	npm run start
