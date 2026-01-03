@@ -1,5 +1,8 @@
-install:
+i:
 	npm ci .
+
+install:
+	npm i
 
 start:
 	npm run start
