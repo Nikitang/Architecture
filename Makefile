@@ -21,3 +21,9 @@ stylelint:
 
 stylelint-fix:
 	npm run lint:scss:fix
+
+sb:
+	npm run storybook
+
+chrmt: 
+	npm run chromatic
