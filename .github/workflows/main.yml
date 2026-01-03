@@ -13,12 +13,12 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Starting Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v4
               with:
                   node_version: ${{ matrix.node-version }}
 
             - name: install modules
-              run: make install
+              run: make i
 
             - name: build production project
               run: make prod
