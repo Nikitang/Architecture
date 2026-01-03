@@ -2,7 +2,7 @@ i:
 	npm ci .
 
 install:
-	npm install --frozen-lockfile
+	npm install --frozen-lockfile --legacy-peer-deps
 
 start:
 	npm run start
