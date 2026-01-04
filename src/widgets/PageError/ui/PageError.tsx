@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styles from './PageError.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface PageErrorProps {
     className?: string;
@@ -19,7 +19,7 @@ export const PageError = ({ className }: PageErrorProps) => {
             <p>{t('unexpectedError')}</p>
             <Button
                 onClick={refreshPage}
-                theme={ThemeButton.OUTLINE}
+                theme={ButtonTheme.OUTLINE}
                 className={styles.btnError}
             >
                 {t('refreshPage')}

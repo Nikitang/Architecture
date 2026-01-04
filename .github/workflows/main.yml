@@ -24,15 +24,20 @@ jobs:
 
             - name: build production project
               run: make prod
+              if: always()
 
             - name: typescript linting
               run: make lint
+              if: always()
 
             - name: css linting
               run: make stylelint
+              if: always()
 
             - name: unit testing
               run: make test
+              if: always()
 
             - name: ui testing
               run: make chrom
+              if: always()
