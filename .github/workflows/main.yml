@@ -18,7 +18,7 @@ jobs:
                   node_version: ${{ matrix.node-version }}
 
             - name: install modules
-              run: make i
+              run: make install
 
             - name: build production project
               run: make prod
@@ -31,3 +31,6 @@ jobs:
 
             - name: unit testing
               run: make test
+
+            - name: ui testing
+              run: make chrom

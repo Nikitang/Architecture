@@ -1,8 +1,5 @@
-i:
-	npm ci .
-
 install:
-	npm install --frozen-lockfile --legacy-peer-deps
+	npm ci .
 
 start:
 	npm run start
@@ -31,5 +28,5 @@ stylelint-fix:
 sb:
 	npm run storybook
 
-chrmt: 
+chrom: 
 	npm run chromatic
