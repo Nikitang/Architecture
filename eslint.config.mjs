@@ -1,17 +1,15 @@
-// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
-
 import i18next from 'eslint-plugin-i18next';
 import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
 
 export default defineConfig([
     {
         files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-        plugins: { js },
+        plugins: { js, 'react-hooks': pluginReactHooks },
         ...js.configs.recommended,
         extends: ['js/recommended'],
         languageOptions: { globals: globals.browser },
@@ -38,6 +36,7 @@ export default defineConfig([
                     ignorePattern: '^import\\s.+\\sfrom\\s.+$',
                 },
             ],
+            ...pluginReactHooks.configs.recommended.rules,
         },
     },
 ]);

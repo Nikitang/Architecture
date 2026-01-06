@@ -1,14 +1,14 @@
 {
-    "Тестер": "Tester",
-    "Перевод": "Translate",
-    "language": "English",
-    "pageNotFound": "Page not found",
-    "ToMain": "To main",
-    "AboutUs": "About us",
-    "unexpectedError": "An unexpected error occurred",
-    "refreshPage": "Refresh page",
-    "throwError": "Throw error",
-    "shortLang": "En",
-
-    "toggle": "Toggle"
+  "Тестер": "Tester",
+  "Перевод": "Translate",
+  "language": "English",
+  "pageNotFound": "Page not found",
+  "ToMain": "To main",
+  "AboutUs": "About us",
+  "unexpectedError": "An unexpected error occurred",
+  "refreshPage": "Refresh page",
+  "throwError": "Throw error",
+  "shortLang": "En",
+  "toggle": "Toggle",
+  "login": "Login"
 }
