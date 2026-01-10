@@ -1,22 +1,9 @@
-import { Suspense, useEffect, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 import { PageLoader } from 'widgets/PageLoader';
 
 const AppRouter = () => {
-    const location = useLocation();
-    const [isLoading, setIsLoading] = useState(false);
-
-    // Показываем лоадер при каждом изменении маршрута
-    useEffect(() => {
-        setIsLoading(true);
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 3000);
-
-        return () => clearTimeout(timer);
-    }, [location.pathname]);
-
     return (
         <>
             <Routes>

@@ -29,7 +29,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
             </Button>
 
             <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                Lorem ipsum
+                {t('Lorem ipsum')}
             </Modal>
         </div>
     );
