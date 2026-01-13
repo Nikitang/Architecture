@@ -3,7 +3,8 @@
 @use './themes/dark';
 @use './themes/normal';
 
-body {
+.app,
+.app_modal {
     font-family: var(--font-m);
     color: var(--primary-color);
 }
