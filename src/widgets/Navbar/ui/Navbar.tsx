@@ -3,7 +3,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
 import { LoginModal } from 'features/AuthByUsername';
 
 interface NavbarProps {
