@@ -10,5 +10,7 @@
   "throwError": "Выбросить ошибку",
   "shortLang": "Ru",
   "toggle": "Переключить",
-  "login": "Войти"
+  "login": "Войти",
+  "enterUsername": "Введите имя пользователя",
+  "enterPassword": "Введите пароль"
 }

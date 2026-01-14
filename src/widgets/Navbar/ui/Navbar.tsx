@@ -4,6 +4,7 @@ import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Modal } from 'shared/ui/Modal/Modal';
+import { LoginModal } from 'features/AuthByUsername';
 
 interface NavbarProps {
     className?: string;
@@ -14,8 +15,12 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
 
     const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const onToggleModal = () => {
-        setIsAuthModal((prev) => !prev);
+    const onCloseModal = () => {
+        setIsAuthModal(false);
+    };
+
+    const onShowModal = () => {
+        setIsAuthModal(true);
     };
 
     return (
@@ -23,14 +28,12 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
             <Button
                 className={styles.links}
                 theme={ButtonTheme.CLEAR_INVERTED}
-                onClick={onToggleModal}
+                onClick={onShowModal}
             >
                 {t('login')}
             </Button>
 
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {t('Lorem ipsum')}
-            </Modal>
+            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
         </div>
     );
 };

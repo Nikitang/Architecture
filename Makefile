@@ -4,6 +4,9 @@ install:
 start:
 	npm run start
 
+server:
+	npm run start:dev:server
+
 test:
 	npm run unit
 

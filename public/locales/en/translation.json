@@ -10,5 +10,7 @@
   "throwError": "Throw error",
   "shortLang": "En",
   "toggle": "Toggle",
-  "login": "Login"
+  "login": "Login",
+  "enterUsername": "Enter user name",
+  "enterPassword": "Enter password"
 }
