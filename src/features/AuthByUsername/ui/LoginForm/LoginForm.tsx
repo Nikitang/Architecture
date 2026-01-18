@@ -41,7 +41,9 @@ const Login = ({ className }: LoginFormProps) => {
     return (
         <div className={classNames(styles.loginForm, {}, [className])}>
             <Text title={t('Authorization form')} />
-            {error && <Text text={error} theme={TextTheme.ERROR} />}
+            {error && (
+                <Text text={t('Incorrect user data')} theme={TextTheme.ERROR} />
+            )}
             <Input
                 className={styles.input}
                 type="text"
