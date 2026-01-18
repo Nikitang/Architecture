@@ -5,9 +5,7 @@
 
 .app,
 .app_modal {
-    font-size: var(--font-size-m);
-    line-height: var(--font-line-m);
-    font-family: var(--font-family-main);
+    font: var(--font-m);
     color: var(--primary-color);
 }
 

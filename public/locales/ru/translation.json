@@ -12,5 +12,8 @@
   "toggle": "Переключить",
   "login": "Войти",
   "enterUsername": "Введите имя пользователя",
-  "enterPassword": "Введите пароль"
+  "enterPassword": "Введите пароль",
+  "Authorization form": "Форма авторизации",
+  "Incorrect user data": "Вы ввели неверный логин или пароль",
+  "logout": "Выйти"
 }
