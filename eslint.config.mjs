@@ -33,10 +33,8 @@ export default defineConfig([
                 'error',
                 {
                     ignoreComments: true,
-                    ignorePattern: [
-                        '^import\\s.+\\sfrom\\s.+$',
-                        '^export\\s.+\\sfrom\\s.+$',
-                    ],
+                    ignorePattern:
+                        '^(import\\s.+\\sfrom\\s.+|export\\s.+\\sfrom\\s.+)$',
                 },
             ],
             ...pluginReactHooks.configs.recommended.rules,

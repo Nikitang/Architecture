@@ -24,12 +24,12 @@ export function buildPlugins({
 
     if (isDev) {
         plugins.push(
+            // new BundleAnalyzerPlugin({
+            //     openAnalyzer: false,
+            //     analyzerPort: 8889,
+            // }),
             new webpack.HotModuleReplacementPlugin(),
             new ReactRefreshWebpackPlugin(),
-
-            new BundleAnalyzerPlugin({
-                openAnalyzer: false,
-            })
         );
     }
     return plugins;

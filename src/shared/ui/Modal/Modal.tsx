@@ -27,6 +27,8 @@ export const Modal = ({
     const { theme } = useTheme();
 
     useEffect(() => {
+        //lint disabled - because setState use for mount
+        // eslint-disable-next-line
         if (isOpen) setIsMounted(true);
     }, [isOpen]);
 
@@ -49,7 +51,7 @@ export const Modal = ({
         (e: KeyboardEvent) => {
             if (e.key === 'Escape') closeHandler();
         },
-        [closeHandler]
+        [closeHandler],
     );
 
     useEffect(() => {
