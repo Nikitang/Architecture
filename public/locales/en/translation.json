@@ -15,5 +15,6 @@
   "enterPassword": "Enter password",
   "Authorization form": "Authorization form",
   "Incorrect user data": "You entered an incorrect login or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "Profile": "Profile"
 }

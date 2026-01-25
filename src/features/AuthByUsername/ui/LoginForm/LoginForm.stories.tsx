@@ -4,6 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import LoginForm from './LoginForm';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { fn } from 'storybook/test';
 
 const meta = {
     title: 'features/LoginForm',
@@ -14,7 +15,7 @@ const meta = {
 
     tags: ['autodocs'],
     argTypes: {},
-    args: {},
+    args: { onSuccess: fn() },
 } satisfies Meta<typeof LoginForm>;
 
 export default meta;

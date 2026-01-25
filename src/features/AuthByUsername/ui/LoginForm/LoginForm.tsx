@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
-import { useAppDispatch } from 'app/providers/StoreProvider';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
@@ -20,13 +20,14 @@ import {
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducerList = {
     loginForm: loginReducer,
 };
 
-const Login = ({ className }: LoginFormProps) => {
+const Login = ({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const username = useSelector(getLoginUsername);
@@ -48,9 +49,12 @@ const Login = ({ className }: LoginFormProps) => {
         [dispatch],
     );
 
-    const onClickLogic = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const onClickLogin = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        }
+    }, [onSuccess, dispatch, username, password]);
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
@@ -79,7 +83,7 @@ const Login = ({ className }: LoginFormProps) => {
                 />
                 <Button
                     className={styles.loginBtn}
-                    onClick={onClickLogic}
+                    onClick={onClickLogin}
                     theme={ButtonTheme.OUTLINE}
                     disabled={isLoading}
                 >
