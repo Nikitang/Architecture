@@ -15,8 +15,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
 
-    config.resolve ??= {};
-    config.resolve.modules = [paths.src, 'node_modules'];
+    // config.resolve ??= {};
+    config.resolve!.modules = [paths.src, 'node_modules'];
     config.resolve?.extensions?.push('.ts', '.tsx');
 
     config?.plugins?.push(
@@ -26,18 +26,16 @@ export default ({ config }: { config: webpack.Configuration }) => {
         }),
     );
 
-    if (config.module?.rules) {
-        config.module.rules = config.module.rules.map((rule) => {
-            if (
-                rule &&
-                typeof rule === 'object' &&
-                /svg/.test(rule.test as string)
-            ) {
-                return { ...rule, exclude: /\.svg$/i };
-            }
-            return rule;
-        });
-    }
+    config.module!.rules = config.module!.rules!.map((rule) => {
+        if (
+            rule &&
+            typeof rule === 'object' &&
+            /svg/.test(rule.test as string)
+        ) {
+            return { ...rule, exclude: /\.svg$/i };
+        }
+        return rule;
+    });
 
     config.module?.rules?.push({
         test: /\.svg$/,

@@ -25,5 +25,14 @@
             "password": "123"
         }
     ],
-    "profile": { "name": "typicode" }
+    "profile": {
+        "firstName": "Nick",
+        "lastName": "I'Am",
+        "age": "21",
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Saint-Petersburg",
+        "username": "admin",
+        "avatar": "http"
+    }
 }

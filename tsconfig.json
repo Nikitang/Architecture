@@ -9,6 +9,7 @@
         "allowJs": true,
         "moduleResolution": "bundler",
         "baseUrl": ".",
+        "strict": true,
         "paths": {
             "*": ["./src/*"]
         },

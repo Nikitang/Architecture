@@ -28,13 +28,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const ButtonComponent = ({
     className,
     children,
-    theme,
+    theme = ButtonTheme.OUTLINE,
     square,
     disabled,
     size = ButtonSize.M,
     ...otherProps
 }: ButtonProps) => {
-    const mods: Record<string, boolean> = {
+    const mods: Record<string, boolean | undefined> = {
         [styles[theme]]: true,
         [styles.square]: square,
         [styles[size]]: true,

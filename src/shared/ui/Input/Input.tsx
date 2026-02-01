@@ -37,7 +37,7 @@ export const InputComponent = ({
 
     useEffect(() => {
         if (autoFocus) {
-            ref.current.focus();
+            ref.current?.focus();
         }
     }, [autoFocus]);
 
