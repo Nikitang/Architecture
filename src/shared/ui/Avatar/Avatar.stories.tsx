@@ -1,12 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Modal } from './Modal';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Avatar } from './Avatar';
+import Ava from './Ava.jpg';
 
 const meta = {
-    title: 'shared/Modal',
-    component: Modal,
+    title: 'shared/Avatar',
+    component: Avatar,
     parameters: {
         layout: 'fullscreen',
     },
@@ -14,22 +15,21 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Modal>;
+} satisfies Meta<typeof Avatar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        isOpen: true,
-        children: 'Lorem ipsum',
+        size: 150,
+        src: Ava,
     },
 };
 
-export const Dark: Story = {
+export const Small: Story = {
     args: {
-        isOpen: true,
-        children: 'Lorem ipsum',
+        size: 50,
+        src: Ava,
     },
-    decorators: [ThemeDecorator(Theme.DARK)],
 };

@@ -1,0 +1,77 @@
+// .wrapper {
+//     display: flex;
+// }
+
+.label {
+    margin-right: 5px;
+}
+
+// .select {
+//     background: none;
+//     outline: none;
+//     color: var(--primary-color);
+//     padding: 2px 10px 2px 2px;
+//     border: 1px solid var(--primary-color);
+//     border-radius: 2px;
+// }
+
+// .option {
+//     color: var(--inverted-primary-color);
+//     background-color: var(--inverted-bg-color);
+
+//     &::before {
+//         background-color: var(--inverted-bg-color);
+//     }
+// }
+
+.wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.rotate {
+    transform: rotate(0);
+    transition: 0.5s;
+}
+
+.rotateDeg {
+    transform: rotate(-180deg);
+    transition: 0.5s;
+}
+
+.customSelect {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 10px;
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    background: var(--inverted-bg-color);
+    border: 1px solid var(--primary-color);
+}
+
+.option {
+    padding: 4px 10px;
+    color: var(--inverted-primary-color);
+    cursor: pointer;
+
+    &:hover {
+        background: rgb(255 255 255 / 10%);
+    }
+}
+
+.readonly {
+    opacity: 0.7;
+    cursor: default;
+}
