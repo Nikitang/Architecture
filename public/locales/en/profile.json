@@ -12,5 +12,10 @@
   "Username": "Username",
   "Avatar": "Avatar",
   "Indicate currency": "Indicate currency",
-  "Indicate country": "Indicate country"
+  "Indicate country": "Indicate country",
+  "Incorrect user data": "Incorrect user data",
+  "Incorrect age": "Incorrect age",
+  "Incorrect country": "Incorrect country",
+  "A server error occurred while saving": "A server error occurred while saving",
+  "Data not specified": "Data not specified"
 }

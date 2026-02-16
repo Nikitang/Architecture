@@ -28,7 +28,7 @@
   "profile": {
     "firstName": "Nick",
     "lastName": "I'Am",
-    "age": "21",
+    "age": 21,
     "currency": "EUR",
     "country": "Russia",
     "city": "Saint-Petersburg",

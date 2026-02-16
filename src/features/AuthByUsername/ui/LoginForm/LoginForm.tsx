@@ -62,7 +62,7 @@ const Login = ({ className, onSuccess }: LoginFormProps) => {
                 <Text title={t('Authorization form')} />
                 {error && (
                     <Text
-                        text={t('Incorrect user data')}
+                        text={t('Incorrect user login or password')}
                         theme={TextTheme.ERROR}
                     />
                 )}
